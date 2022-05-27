@@ -1,6 +1,6 @@
 namespace ProjetoTDD.Teste
 {
-    public class UnitTest1
+    public class LeilaoTestes
     {
         [Fact]
         public void Test1()

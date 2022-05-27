@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjetoTDD", "ProjetoTDD\Pr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoTDD.Teste", "ProjetoTDD.Teste\ProjetoTDD.Teste.csproj", "{EFB19EBF-43F5-4797-AE80-F9D21EE666FB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoTDD.Lib", "ProjetoTDD.Lib\ProjetoTDD.Lib.csproj", "{01DF045F-E2F3-413F-A757-28B15178B4A4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EFB19EBF-43F5-4797-AE80-F9D21EE666FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EFB19EBF-43F5-4797-AE80-F9D21EE666FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EFB19EBF-43F5-4797-AE80-F9D21EE666FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01DF045F-E2F3-413F-A757-28B15178B4A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DF045F-E2F3-413F-A757-28B15178B4A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DF045F-E2F3-413F-A757-28B15178B4A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DF045F-E2F3-413F-A757-28B15178B4A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
