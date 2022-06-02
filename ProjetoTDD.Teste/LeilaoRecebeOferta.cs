@@ -6,7 +6,7 @@ namespace ProjetoTDD.Teste
         [Fact]
         public void NaoAceitaProximoLanceDadoMesmoClienteRealizouUltimoLance()
         {
-            //Arranje - cenário
+            //Arranje - cenário a ser testado
             var modalidade = new MaiorValor();
             var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
@@ -16,7 +16,7 @@ namespace ProjetoTDD.Teste
             //Act - método sob teste
             leilao.RecebeLance(fulano, 1000);
 
-            //Assert
+            //Assert - verificação dos resultados
             var qtdeEsperada = 1;
             var qtdeObtida = leilao.Lances.Count();
             Assert.Equal(qtdeEsperada, qtdeObtida);
@@ -28,7 +28,7 @@ namespace ProjetoTDD.Teste
         public void NaoPermiteNovosLancesDadoLeilaoFinalizado(
             int qtdeEsperada, double[] ofertas)
         {
-            //Arranje - cenário
+            //Arranje - cenário a ser testado
             var modalidade = new MaiorValor();
             var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
@@ -51,7 +51,7 @@ namespace ProjetoTDD.Teste
             //Act - método sob teste
             leilao.RecebeLance(fulano, 1000);
 
-            //Assert
+            //Assert - verificação dos resultados
             var qtdeObtida = leilao.Lances.Count();
             Assert.Equal(qtdeEsperada, qtdeObtida);
         }

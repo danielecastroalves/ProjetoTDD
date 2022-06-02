@@ -10,7 +10,7 @@ namespace ProjetoTDD.Teste
             double valorEsperado,
             double[] ofertas)
         {
-            //Arranje
+            //Arranje - cenário a ser testado
             IModalidadeAvaliacao modalidade =
                 new OfertaSuperiorMaisProxima(valorDestino);
             var leilao = new Leilao("Van Gogh", modalidade);
@@ -30,10 +30,10 @@ namespace ProjetoTDD.Teste
                 }
             }
 
-            //Act
+            //Act - método sob teste
             leilao.TerminaPregao();
 
-            //Assert
+            //Assert - verificação dos resultados
             Assert.Equal(valorEsperado, leilao.Ganhador.Valor);
 
         }
@@ -46,12 +46,13 @@ namespace ProjetoTDD.Teste
             double valorEsperado,
             double[] ofertas)
         {
-            //Arranje - cenário
+            //Arranje - cenário a ser testado
             var modalidade = new MaiorValor();
             var leilao = new Leilao("Van Gogh", modalidade);
             var fulano = new Interessada("Fulano", leilao);
             var maria = new Interessada("Maria", leilao);
             leilao.IniciaPregao();
+
             for (int i = 0; i < ofertas.Length; i++)
             {
                 var valor = ofertas[i];
@@ -68,7 +69,7 @@ namespace ProjetoTDD.Teste
             //Act - método sob teste
             leilao.TerminaPregao();
 
-            //Assert
+            //Assert - verificação dos resultados
             var valorObtido = leilao.Ganhador.Valor;
             Assert.Equal(valorEsperado, valorObtido);
 
@@ -94,7 +95,7 @@ namespace ProjetoTDD.Teste
         [Fact]
         public void RetornaZeroDadoLeilaoSemLances()
         {
-            //Arranje - cenário
+            //Arranje - cenário a ser testado
             var modalidade = new MaiorValor();
             var leilao = new Leilao("Van Gogh", modalidade);
             leilao.IniciaPregao();
@@ -102,7 +103,7 @@ namespace ProjetoTDD.Teste
             //Act - método sob teste
             leilao.TerminaPregao();
 
-            //Assert
+            //Assert - verificação dos resultados
             var valorEsperado = 0;
             var valorObtido = leilao.Ganhador.Valor;
 
